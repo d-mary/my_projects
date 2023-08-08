@@ -1,0 +1,761 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+body {
+    background-image: url(background5.jpg);
+
+    background-size: contain ;
+   
+    position: relative;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 24px;
+    font-size: 20px;
+    padding: 50px;
+    font-family: 'PT Sans Caption', sans-serif;
+
+   
+
+
+
+}
+form {
+ 
+    background: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius:10px;
+
+}
+
+input {
+    width: 60px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.swiper {
+    display: flex;
+    justify-content: center;
+}
+
+.result_calc_cal {
+    background:white;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    border-radius:10px
+}
+
+.result_cal_list {
+    display: flex;
+    justify-content: space-evenly;
+}
+.result_cal_list li {
+    margin: 0 20px 0 0 ;
+}
+
+.list_head {
+    display: none;
+    font-size: 25px;
+    font-weight: 600;
+}
+h1 {
+    font-size: 45px;
+    color:white;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+    
+}
+
+.wrapper_calc_prod h2 {
+    font-size: 45px;
+        font-weight: 600;
+        text-align: left;
+        margin: 30px 0 10px 0;
+        color:white;
+        text-align: center;
+}
+
+/* .headings {
+    padding-right: 44px;
+} */
+.swiper input[type=radio] {
+    display: none;
+}
+
+.swiper input[type=radio]+label {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+    padding: 10px 80px;
+    transition: background 0.5s cubic-bezier(0.38, -0.01, 0.2, 1);
+}
+
+.swiper input[type=radio]+label {
+   
+    margin: 0 15px 0 0;
+    font-weight: 600;
+
+}
+
+
+#age:focus-visible, #height:focus-visible, #weight:focus-visible {
+  border: 2px solid rgb(117, 117, 117);
+outline: none;
+
+}
+.swiper input[type=radio]:checked+label {
+    background: rgb(16, 23, 33);
+    color: white;
+
+
+}
+
+
+.swiper input[type=radio] label:hover {
+    color: #666;
+}
+
+
+.swiper input[type=radio]:disabled+label {
+    background: #efefef;
+    color: #666;
+}
+
+
+
+/* Checked */
+.radio_group input:checked+label {
+    background: rgb(16, 23, 33);
+    color: white;
+
+}
+
+/* Hover */
+.radio_group input[type=radio] label:hover {
+    color: #666;
+}
+
+/* Disabled */
+.radio_group input[type=radio]:disabled+label {
+    background: #efefef;
+    color: #666;
+}
+
+
+.radio_group input[type=radio] {
+    display: none;
+}
+
+.radio_group input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+
+    line-height: 34px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+ 
+    transition: background 0.5s cubic-bezier(0.38, -0.01, 0.2, 1);
+}
+
+
+.radio_group label {
+    width:-webkit-fill-available;
+}
+
+
+.radio_group {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.radio_group li {
+    width:19%
+}
+/* Checked */
+.radio_group input[type=radio]:checked+label {
+    background: rgb(16, 23, 33);
+    color: white;
+   
+}
+
+/* Hover */
+.radio_group input[type=radio] label:hover {
+    color: #666;
+}
+
+/* Disabled */
+.radio_group input[type=radio]:disabled+label {
+    background: #efefef;
+    color: #666;
+}
+
+
+/* Checked */
+.radio_group  input:checked+label {
+    background: rgb(16, 23, 33);
+    color:white;
+  
+}
+
+/* Hover */
+.radio_group input[type=radio] label:hover {
+    color: #666;
+}
+
+/* Disabled */
+.radio_group input[type=radio]:disabled+label {
+    background: #efefef;
+    color: #666;
+}
+
+
+.list_user_data {
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.list_user_data span {
+    font-weight: 300;
+        font-size: 20px;
+        color:rgba(0, 0, 0, 0.39)
+}
+.list_user_data li {
+
+    width: 33%;
+}
+
+.list_user_data label {
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.list_user_data input::placeholder {
+   font-size: 18px;
+   opacity: 0.7;
+}
+
+.radio_group {
+    text-align: left;
+    font-weight: 900;
+
+}
+
+.radio_group p {
+  
+    font-weight: 100;
+    color:rgba(0, 0, 0, 0.862);
+  
+    border-radius:6px;
+ margin-top: 5px;
+    text-align: center;
+  
+}
+
+
+.radio_group li {
+    margin: 0 0 10px 0;
+    background:transparent;
+        transition: background 0.6s ease;
+
+}
+
+.radio_group li:hover {
+    background:rgba(59, 105, 162, 0.156);
+    border:1px solid black;
+    cursor:pointer;
+    border-radius:6px
+}
+.radio_group input {
+    width:30px
+}
+
+
+button {
+
+   
+    background: rgb(44, 63, 90);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius:5px;
+    transition: background 0.5s cubic-bezier(0.38, -0.01, 0.2, 1);
+    padding: 15px 20px;
+}
+
+button:hover {
+background: rgb(16, 23, 33);
+
+}
+
+button:hover, label:hover, input:hover {
+    cursor: pointer;
+}
+
+
+.result_cal_list p {
+    color:rgba(0, 0, 0, 0.739);
+        margin: 5px 0 0 0;
+}
+
+.result_cal_list span {
+    font-weight: 900;
+    font-size: 25px;
+
+}
+
+
+
+.result_calc_cal {
+    background:white
+}
+
+/* .result_calc_cal li {
+    display: flex;
+    justify-content: space-between;
+        } */
+
+
+
+.radio_group label {
+    text-align: center;
+
+}
+
+.ra
+#product_name {
+    width: 200px;
+}
+
+.wrapper_calc_prod_result {
+background:white;
+padding: 20px;
+/* margin: 50px 0 0 0; */
+}
+
+
+
+ul li {
+    margin-bottom: 10px;
+
+}
+
+.result_list_cal_prod li span{
+    width: 20%;
+}
+
+.total_added_cal, .calc_rest_result, .wrapper_calc_prod_result {
+    display: none;
+}
+
+.btn_add {
+    width: 75px;
+}
+.btn_delete{
+    width: 85px;
+}
+.wrapper_calc_prod_result {
+    margin-top: 10px;;
+    border:3px solid darkblue;
+    border-radius:6px;
+   background: rgb(245, 245, 245);
+}
+
+.style_for_error {
+    border:1px solid red;
+ 
+}
+.btn_add {
+    display: none;
+}
+
+.total_added_cal {
+    display: none;
+}
+
+.total_added_cal.active {
+    display: flex;
+    justify-content: space-around;
+}
+
+.active {
+    display: block;
+}
+
+.err {
+    color: red
+}
+
+
+
+div.result_search_prod_cal {
+    padding: 5px;
+    margin-top: 70px;
+    border:3px solid gray;
+    border-radius:6px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 22px;
+    background:white
+}
+
+.result_list_cal_prod li:not(.total_added_cal) {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: 2px solid gray;
+border-radius: 6px;
+padding: 5px;
+background:white
+}
+
+.total_added_cal {
+    border: 3px solid rgb(170, 5, 5);
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    background:white
+
+}
+
+.wrapper_calc_prod_result h3 {
+
+font-size: 25px;
+font-weight: 600;
+color: rgb(3, 3, 74);
+        
+}
+
+
+
+.img {
+    width: 50px;
+    height:50px
+}
+
+
+.headings {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+  
+}
+
+
+.result_search_prod_cal div:before {
+ content:"";
+    width: 100%;
+    height: 50px;
+   
+    position: absolute;
+    bottom:100%;
+    left:0
+}
+
+
+.result_search_prod_cal div.prod_name::before{
+content:"Product"
+}
+
+.result_search_prod_cal div.cal::before {
+    content: "Calories"
+}
+
+.result_search_prod_cal div.proteins::before {
+    content: "Proteins"
+}
+
+.result_search_prod_cal div.fats::before {
+    content: "Fats"
+}
+.result_search_prod_cal div.carbohydrates::before {
+    content: "Carbohydrates"
+}
+.result_search_prod_cal div {
+    position: relative;
+
+}
+/* 
+.result_search_prod_cal {
+    padding-top: 100px;
+} */
+
+
+.calc_rest_result_wrapper button {
+    padding: 15px;
+    font-size: 20px; 
+    width: 100px;
+    margin-right: 35px;
+  
+}
+
+
+.form_calc input:first-child {
+    border-radius:6px;
+width: 15%;
+}
+
+#brutto {
+        border-radius: 6px;
+            width: 5%;
+}
+
+
+ .wrapp {
+    display: flex;
+    justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+.result_search_prod_cal div {
+    width: 15%;
+}
+
+.headings span {
+    width: 15%;
+}
+
+.headings span:first-child {
+    width: 50px;
+}
+
+
+.total_added_cal span::before {
+    content:"";
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    bottom:100%;
+    left:0
+}
+
+.total_added_cal .total_cal::before {
+    content:"Calories"
+}
+.total_added_cal .total_fats::before {
+    content: "Fats"
+}
+.total_added_cal .total_proteins::before {
+    content: "Proteins"
+}
+
+.total_added_cal .total_carbohydrates::before {
+    content: "Carbohydrates"
+}
+
+
+.total_added_cal span {
+ position: relative;
+}
+
+.total_added_cal {
+    margin-top: 50px;
+}
+
+.calc_rest_result_wrapper {
+    background:whitesmoke;
+    margin-top: 10px;
+
+    border-radius:6px;
+    padding: 10px 30px 30px 30px;
+}
+
+.desc {
+    background:white;
+    padding: 20px;
+    font-size: 22px;
+}
+
+ .calc_rest_result {
+    
+    padding: 15px;
+    background:white;
+    border-radius:6px;
+    color: rgb(170, 5, 5);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.btn_calc {
+    margin: 15px 0 0 0;
+    
+}
+
+
+.form_calc input::placeholder {
+    font-size: 18px;
+    opacity: 0.7;
+}
+#prod_name,
+#brutto {
+    outline: none;
+    border: 1px solid gray
+}
+
+#prod_name:focus-visible, #brutto:focus-visible {
+    outline: none;
+border:1px solid rgb(88, 88, 88)
+}
+
+
+
+.result_calc_cal h2 {
+    color:black;
+    font-size: 30px;
+    margin: 10px 0 25px 0;
+}

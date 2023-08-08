@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="node_modules/select2/dist/js/i18n/ru.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="node_modules/select2/dist/css/select2.min.css"
+    />
+
+    <title>Calorie counter</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Calorie counter</h1>
+      <form action="#" method="get">
+        <h3>Gender</h2>
+        <ul class="swiper">
+          <li>
+            <input
+              type="radio"
+              checked
+              required
+              id="gender_male"
+              name="gender"
+              value="male"
+            />
+            <label for="gender_male">Male</label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              required
+              id="gender_female"
+              name="gender"
+              value="female"
+            />
+            <label for="gender_female">Female</label>
+          </li>
+        </ul>
+          <ul class="list_user_data">
+            <li>
+              <label for="age">Age<span> yr</span></label>
+              <input id="age" name="age" placeholder="age"/>
+            </li>
+            <li>
+              <label for="height">Height<span> cm</span></label>
+              <input id="height"  name="height" placeholder="height"  />
+            </li>
+            <li>
+              <label for="weight">Weight<span> kg</span></label>
+              <input id="weight"  name="weight" placeholder="weight"  />
+            </li>
+          </ul>
+          <h3>Physical activity</h3>
+          <ul class="radio_group">
+            <li>
+              <input
+                id="min_activity"
+                type="radio"
+                name="radio_item"
+                required
+                checked
+                value="activity"
+              />
+              <label for="min_activity">Minimal</label>
+              <p class="radio_desc">Sedentary work, no physical activity.</p>
+            </li>
+
+            <li>
+              <input
+                id="low_activity"
+                type="radio"
+                name="radio_item"
+                required
+                value="activity"
+              />
+              <label for="low_activity">Low</label>
+              <p class="radio_desc">
+               Infrequent, irregular workouts, household activities.
+              </p>
+            </li>
+            <li>
+              <input
+                id="medium_activity"
+                type="radio"
+                name="radio_item"
+                required
+                value="activity"
+              />
+              <label for="medium_activity">Medium</label>
+              <p class="radio_desc">Workout 3-5 times a week.</p>
+            </li>
+            <li>
+              <input
+                id="high_activity"
+                type="radio"
+                name="radio_item"
+                required
+                value="activity"
+              />
+              <label for="high_activity">High</label>
+              <p class="radio_desc">Workout 6-7 times a week.</p>
+            </li>
+            <li>
+              <input
+                id="max_activity"
+                type="radio"
+                name="radio_item"
+                required
+                value="activity"
+              />
+              <label for="max_activity">Very high</label>
+              <p class="radio_desc">
+               More than 6 workouts per week, physical work.
+              </p>
+            </li>
+          </ul>
+        <button class="btn_calc" type="submit">Calculate</button>
+      <div class="result_calc_cal">
+        <h2>Your calorie allowance</h2>
+        <ul class="result_cal_list">
+          <li>
+            <span id="cal_lose_weight">0</span>
+            <p>weight loss</p>
+          </li>
+          <li>
+            <span id="cal_maintenance">0</span>
+            <p>weight maintenance</p>
+          </li>
+          <li>
+            <span id="cal_gain_weight">0</span>
+            <p>weight gain</p>
+          </li>
+        </ul>
+        </form>
+      </div>
+
+      <div class="wrapper_calc_prod">
+        <h2>Calorie Calculator</h2>
+        <form action="#" method="GET" class="form_calc">
+          <input id="prod_name" name="prod_name" placeholder="product" />
+          <input id="brutto" name="brutto" required placeholder="gr" />
+          <button class="btn_search">Search</button>
+       
+        </form>
+
+        <div class="wrapper_calc_prod_result">   
+          <h3>Search results:</h3>  
+    
+          <div class="result_search_prod_cal">
+         
+            <img class="img"></img>
+            <div class="prod_name"></div>
+            <div class="cal"></div>
+            <div class="proteins"></div>
+            <div class="fats"></div>
+            <div class="carbohydrates"></div>
+            <button class="btn_add">Add</button>
+          </div>
+     <h3 class="list_head">Your product's list</h3>
+          <ul class="result_list_cal_prod">
+            <li class="total_added_cal">
+              <span>Total:</span>
+              <span class="total_cal"></span>
+              <span class="total_fats"></span>
+              <span class="total_proteins"></span>
+              <span class="total_carbohydrates"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="calc_rest_result_wrapper">
+          <p class="desc">Here you can calculate how many callories left due to loosing weight. </p>
+          <div class="wrapp">
+          <button class="btn_calc_lose_weight">Calculate</button>
+          <p class="calc_rest_result"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
